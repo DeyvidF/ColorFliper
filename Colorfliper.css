@@ -1,51 +1,115 @@
-body {
-    padding: 0;
+/* Reset e Estilos Globais */
+* {
     margin: 0;
-}.header {
-    background-color: gray;
-    padding: 30px;
-    
-}
-.text {
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    
-}
-.header-div{
-    padding-bottom: 85px;
-}
-.main {
-    display: flex;
-    background-color: rgb(33, 32, 32);
-    height: 80vh;
     padding: 0;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
 }
 
-.textdiv{
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
     display: flex;
-    font-size: 30px;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+.header-div {
+    padding: 20px 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.text {
+    font-size: 2.5rem;
     color: white;
-    
-    
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
-.divbtn {
-    
-    padding-left: 40px;
-    
-    
-    
-}.btnC {
-    font-size: 20px;
-    font-weight: bolder;
-    text-decoration: none;
+/* Conteúdo Principal */
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.all {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+.textdiv {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.h2text {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.color {
+    font-weight: bold;
+    color: #6e8efb;
+}
+
+/* Botão */
+.btnC {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
     cursor: pointer;
-    padding: 15px;
-    border-radius: 25px;
-    border: black;
+    box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+    transition: all 0.3s;
+    outline: none;
+}
+
+.btnC:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(110, 142, 251, 0.6);
+}
+
+.btnC:active {
+    transform: translateY(1px);
+}
+
+/* Efeitos responsivos */
+@media (max-width: 768px) {
+    .text {
+        font-size: 2rem;
+    }
+    
+    .h2text {
+        font-size: 1.4rem;
+    }
+    
+    .btnC {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
 }
